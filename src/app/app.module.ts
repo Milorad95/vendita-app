@@ -14,6 +14,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatListModule } from '@angular/material/list';
+import { SidebarModule } from "ng-sidebar";
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     HttpClientModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    SidebarModule.forRoot(),
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

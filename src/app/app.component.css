@@ -14,22 +14,23 @@
     padding: 0 20px; 
   }
 
-  .nav {
+  /* .nav {
     display: block;
-  }
+  } */
 
   
   .container {
-    display: /*-webkit-box*/inline-flex;
+    display:-webkit-boxinline-flex;
      flex-wrap:wrap;  
      font-family: 'Times New Roman', Times, serif;
-     /*padding-left: 10%; 
-     padding-right: 10%;*/
+     padding-left: 10%; 
+     padding-right: 10%;
      text-align: center;
      align-items: center;
      margin-left: 15%;
      margin-right: 15%;
-  }
+    } 
+   
 
   .padding {
      padding: 10px;
@@ -37,11 +38,16 @@
     height: fit-content;  
   }
 
-  body > app-root > div.container {
-    display: flex;
+  .example-card {
+    background-color: white;
+    
   }
+ body > app-root > div.container {
+    display: flex;
+  } 
+
   img {
-    width: 100%;
+    width: auto;
     max-width: 250px;
     height: auto;
     margin-top: 10px;
@@ -98,6 +104,7 @@
 
 .opis {
   text-align: center;
+  font-size: medium;
 }
 
 .topnav-right {
@@ -106,4 +113,103 @@
 
 .navbar {
     background-color: cornflowerblue;
+    
+}
+
+.naslov {
+  font-weight: bold;
+}
+
+/* ng-sidebar-container {
+  height: 100vh;
+}
+
+::ng-deep .ng-sidebar {
+  background-color: bisque;
+  width: 300px;
+  padding: 2em 3em;
+  box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5);
+} */
+
+mat-toolbar {
+  background-color: #3d79be;
+  color: white;
+  height: 50px;
+  border-radius: 5px;
+}
+
+mat-sidenav {
+  margin: 16px;
+  width: 200px;
+  border-right: none;
+  background-color: #3d79be;
+  color: white;
+  border-radius: 7px;
+  padding: 16px;
+  text-align: center;
+}
+
+mat-sidenav-container {
+  height: calc(100vh - 65px);
+}
+
+.content {
+  height: calc(100vh - 98px);
+  margin: 16px;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 2rem;
+  color: rgb(141, 137, 137);
+  border-radius: 7px;
+  background-color: rgb(235, 235, 235);
+  /* box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5); */
+  box-shadow: 0 0 0.2em rgba(71, 70, 70, 0.5);
+}
+
+.menu-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+
+  
+}
+
+mat-icon {
+  margin-right: 8px;
+}
+
+.logo {
+  border-radius: 10px;
+  width: -webkit-fill-available;
+}
+
+mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.name {
+  margin: 0;
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.8rem;
+  color: antiquewhite;
+}
+
+mat-card-subtitle {
+  font-size: medium;
+}
+
+mat-card {
+  margin: 10px;
 }
