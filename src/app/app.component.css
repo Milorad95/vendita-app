@@ -150,8 +150,8 @@ img {
 } */
 
 mat-toolbar {
-  background-color: #ceb097;
-  color: white;
+  background-color: rgb(223, 223, 223);
+  color: black;
   height: 50px;
   border-radius: 5px;
 }
@@ -160,8 +160,8 @@ mat-sidenav {
   margin: 16px;
   width: 200px;
   border-right: none;
-  background-color: #ceb097;
-  color: rgb(119, 117, 117);
+  background-color: rgb(197, 197, 197);
+  color: black/* rgb(119, 117, 117)*/;
   border-radius: 7px;
   padding: 16px;
   text-align: center;
@@ -183,11 +183,11 @@ mat-sidenav-container {
   font-size: 2rem;
   color: rgb(141, 137, 137);
   border-radius: 7px;
-  background-color: hsl(29, 55%, 90%);
+  background-color: rgb(235, 234, 234)/*hsl(29, 55%, 90%)*/;
   /* box-shadow: 0 0 2.5em rgba(85, 85, 85, 0.5); */
   box-shadow: 0 0 0.5em rgba(71, 70, 70, 0.5);
-  margin-left: 20%;
-  margin-right: 20%;
+  /* margin-left: 20%;
+  margin-right: 20%; */
 
   /* display:-webkit-boxinline-flex; */
   flex-wrap: wrap;
