@@ -1,26 +1,22 @@
-<!-- <router-outlet></router-outlet>
-<ng-sidebar-container>
-  <ng-sidebar [opened]="opened">
-    <p>Stavke menija</p>
-    <button (click)="toggleSidebar()">Sakrij</button>
-
-  </ng-sidebar>
-  <div ng-sidebar-content>
-    <button (click)="toggleSidebar()">Pokazi</button>
-  </div>
-</ng-sidebar-container> -->
-
  <mat-toolbar>
-  <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
-    <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
-    <mat-icon *ngIf="sidenav.opened">close</mat-icon>
-  </button>
-    <h4>Vendita</h4>
+  <div class="divs1">
+    <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
+      <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+      <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+    </button>
+  </div>
+  <div class="divs">
+    <h4 class="toolbarBtn">Vendita</h4>
+  </div>
+  <div class="divs">
+    <button mat-icon-button>
+      <mat-icon matBadge="8" matBadgeSize="small" class="icon">shopping_cart</mat-icon>
+    </button>
+  </div>
  </mat-toolbar>
 
  <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav">
-
     <img class="avatar mat-elevation-z8 logo" src="../assets/logo.png" alt="Vendita">
     <h4 class="name">Vendita</h4>
     <p class="designation">Prodavnica maski</p>
@@ -45,119 +41,29 @@
       <mat-icon>help</mat-icon>
       <span>Pomoć</span>
     </button>
-
-    
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="content padding mat-elevation-z4">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title class="naslov">Iphone 14</mat-card-title>
-          <mat-card-subtitle>Zastitna maska</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.mytrendyphone.rs/images/Hook-Series-Hybrid-Case-Kickstand-for-iPhone-14-Pro-Transparent-01082022-01.webp" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p class="opis">
-            Zastitna maska za vas Iphone 14
-          </p>
-          <mat-card-content class="cena">1700 RSD</mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="button"><mat-icon>add_shopping_cart</mat-icon>Dodaj</button>
-          <!-- <button mat-button>Podeli</button> -->
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title class="naslov">Iphone 14</mat-card-title>
-          <mat-card-subtitle>Zastitna maska</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.mytrendyphone.rs/images/Hook-Series-Hybrid-Case-Kickstand-for-iPhone-14-Pro-Transparent-01082022-01.webp" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p class="opis">
-            Zastitna maska za vas Iphone 14
-          </p>
-          <mat-card-content class="cena">1700 RSD</mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="button"><mat-icon>add_shopping_cart</mat-icon>Dodaj</button>
-          <!-- <button mat-button>Podeli</button> -->
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title class="naslov">Iphone 14</mat-card-title>
-          <mat-card-subtitle>Zastitna maska</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.mytrendyphone.rs/images/Hook-Series-Hybrid-Case-Kickstand-for-iPhone-14-Pro-Transparent-01082022-01.webp" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p class="opis">
-            Zastitna maska za vas Iphone 14
-          </p>
-          <mat-card-content class="cena">1700 RSD</mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="button"><mat-icon>add_shopping_cart</mat-icon>Dodaj</button>
-          <!-- <button mat-button>Podeli</button> -->
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title class="naslov">Iphone 14</mat-card-title>
-          <mat-card-subtitle>Zastitna maska</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.mytrendyphone.rs/images/Hook-Series-Hybrid-Case-Kickstand-for-iPhone-14-Pro-Transparent-01082022-01.webp" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p class="opis">
-            Zastitna maska za vas Iphone 14
-          </p>
-          <mat-card-content class="cena">1700 RSD</mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="button"><mat-icon>add_shopping_cart</mat-icon>Dodaj</button>
-          <!-- <button mat-button>Podeli</button> -->
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title class="naslov">Iphone 14</mat-card-title>
-          <mat-card-subtitle>Zastitna maska</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.mytrendyphone.rs/images/Hook-Series-Hybrid-Case-Kickstand-for-iPhone-14-Pro-Transparent-01082022-01.webp" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p class="opis">
-            Zastitna maska za vas Iphone 14
-          </p>
-          <mat-card-content class="cena">1700 RSD</mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="button"><mat-icon>add_shopping_cart</mat-icon>Dodaj</button>
-          <!-- <button mat-button>Podeli</button> -->
-        </mat-card-actions>
-      </mat-card>
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title class="naslov">Iphone 14</mat-card-title>
-          <mat-card-subtitle>Zastitna maska</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.mytrendyphone.rs/images/Hook-Series-Hybrid-Case-Kickstand-for-iPhone-14-Pro-Transparent-01082022-01.webp" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p class="opis">
-            Zastitna maska za vas Iphone 14
-          </p>
-          <mat-card-content class="cena">1700 RSD</mat-card-content>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-raised-button class="button"><mat-icon>add_shopping_cart</mat-icon>Dodaj</button>
-          <!-- <button mat-button>Podeli</button> -->
-        </mat-card-actions>
-      </mat-card>
+      <div *ngFor="let maska of maske">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title class="naslov">{{maska.model}}</mat-card-title>
+            <mat-card-subtitle>{{maska.namena}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="{{maska.slika}}" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p class="opis">
+              {{maska.opis}}
+            </p>
+            <mat-card-content class="cena">{{maska.cena}} RSD</mat-card-content>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button class="button"><mat-icon>add_shopping_cart</mat-icon>Dodaj</button>
+            <button mat-raised-button>Detaljnije ></button>
+          </mat-card-actions>
+        </mat-card>
+      </div>    
     </div>
   </mat-sidenav-content>
  </mat-sidenav-container>

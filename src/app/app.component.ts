@@ -1,6 +1,10 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { BreakpointObserver } from '@angular/cdk/layout'
+import { Maske } from 'src/modeli/maske';
+import { HttpClient } from '@angular/common/http';
+import { MaskeService } from 'src/servis/maske.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +17,8 @@ export class AppComponent {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
-  constructor(private observer: BreakpointObserver) {
+  constructor(private http: HttpClient, 
+              private observer: BreakpointObserver) {
 
   }
 
@@ -34,4 +39,31 @@ export class AppComponent {
   // onSidenavClose() {
   //   this.opened = !this.opened;
   // }
+
+  maske!: any;
+  servis!: MaskeService;
+  ngOnInit() {
+    const url: string = "/assets/maske.json";
+    this.http.get(url).subscribe( res => {
+      this.maske = res;
+    });
+    // this.servis.dohvatiPodatke().subscribe( res => {
+    //   this.maske = res!;
+    // });
+  }
+
+  @Input() counterValue = 0;
+  @Output() counterChange = new EventEmitter();
+  increment() {
+    this.counterValue++;
+    this.counterChange.emit({
+      value: this.counterValue
+    })
+  }
+  decrement() {
+    this.counterValue--;
+    this.counterChange.emit({
+      value: this.counterValue
+    })
+  }
 }
