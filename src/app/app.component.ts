@@ -5,6 +5,7 @@ import { Maske } from 'src/modeli/maske';
 import { HttpClient } from '@angular/common/http';
 import { MaskeService } from 'src/servis/maske.service';
 import { Observable } from 'rxjs';
+import { environment } from './../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,6 @@ export class AppComponent {
 
   constructor(private http: HttpClient, 
               private observer: BreakpointObserver) {
-
   }
 
   ngAfterViewInit() {
@@ -48,7 +48,7 @@ export class AppComponent {
       this.maske = res;
     });
     // this.servis.dohvatiPodatke().subscribe( res => {
-    //   this.maske = res!;
+    //   this.maske = res;
     // });
   }
 

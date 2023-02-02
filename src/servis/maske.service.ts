@@ -9,7 +9,11 @@ export class MaskeService {
 
   constructor(private http: HttpClient) { }
 
-  url = "vendita-app\src\assets\maske.json";
+  url = "/assets/maske.json";
+
+    // this.http.get(url).subscribe( res => {
+    //   this.maske = res;
+    // });
 
   dohvatiPodatke() {
     return this.http.get(this.url);
