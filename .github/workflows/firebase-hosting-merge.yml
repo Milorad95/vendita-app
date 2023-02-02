@@ -18,4 +18,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_VENDITA_APP }}'
           channelId: live
           projectId: vendita-app
-          entryPoint: "vendita-app\src\dist"
+          entryPoint: "vendita-app/src/dist"
